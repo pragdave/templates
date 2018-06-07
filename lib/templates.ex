@@ -1,7 +1,7 @@
 defmodule Templates do
   use Application
 
-  @name :compile_server
+  # @name :compile_server
 
   # See http://elixir-lang.org/docs/stable/Application.Behaviour.html
   # for more information on OTP Applications

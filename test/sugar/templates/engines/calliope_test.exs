@@ -7,9 +7,9 @@ defmodule Sugar.Templates.Engines.CalliopeTest do
       source: "!!! 5\n%html{lang: \"en-US\"}",
       engine: Sugar.Templates.Engines.Calliope
     }
-    {status, html} = template.engine.render(template, [])
 
-    assert status === :ok
-    assert html === "<!DOCTYPE html><html lang=\"en-US\"></html>"
+    assert {:ok, html} = template.engine.render(template, [])
+
+    assert html == "<!DOCTYPE html>\n<html lang=\"en-US\"></html>\n"
   end
 end
